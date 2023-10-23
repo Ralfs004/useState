@@ -5,7 +5,7 @@ function Counter() {
   const [ratioChange, setRatioChange] = useState(1);
 
   function addRatio() {
-    setResult(result + parseInt (ratioChange));
+    setResult(result + parseInt(ratioChange));
     console.log("Funkcija izsaukta");
     console.log("result ir " + result);
   }
@@ -19,7 +19,7 @@ function Counter() {
   }
 
   return (
-    <div className="Counter">
+    <div className="App">
       <input
         type="number"
         value={ratioChange}

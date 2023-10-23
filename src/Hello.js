@@ -1,22 +1,18 @@
 import { useState } from "react";
 
-function Hello(){
-const [name, setName] = useState(" ");
+function Hello(props) {
+  const [name, setName] = useState(props.name);
 
-function changeName(event) {
-setName(event.target.value);
+  function changeName(event) {
+    setName(event.target.value);
+  }
+
+  return (
+    <div>
+      <input value={name} onChange={changeName}></input>
+      <p>hello, {name}</p>
+    </div>
+  );
 }
-
-return(
-
-<div>
-
-    <input value = {name} onChange ={changeName}></input>
-
-    <p>Hello, {name}</p>
-
-</div>
-
-)}
 
 export default Hello;
